@@ -1,4 +1,4 @@
-package com.liao.viewfunny.test;
+package com.liao.viewfunny;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -15,8 +15,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.liao.viewfunny.R;
-import com.liao.viewfunny.test.ObservableItemAnimator;
+import com.liao.viewfunny.transfer.ObservableItemAnimator;
+import com.liao.viewfunny.transfer.TransferLayout;
 
 import java.util.ArrayList;
 import java.util.List;

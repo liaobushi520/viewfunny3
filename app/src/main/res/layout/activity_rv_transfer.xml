@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.liao.viewfunny.test.TransferLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.liao.viewfunny.transfer.TransferLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/transfer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.liao.viewfunny.test.RvTransferActivity">
+    tools:context="com.liao.viewfunny.RvTransferActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -47,4 +47,4 @@
         </LinearLayout>
 
     </LinearLayout>
-</com.liao.viewfunny.test.TransferLayout>
+</com.liao.viewfunny.transfer.TransferLayout>

@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">viewfunny</string>
-    <string name="quick_position" >快速点位</string>
-    <string name="rv_animation" >RecyclerView动画</string>
-    <string name="small_ui" >小控件</string>
+    <string name="quick_position">快速点位</string>
+    <string name="rv_animation">RecyclerView动画</string>
+    <string name="small_ui">小控件</string>
+    <string name="like_youtube">模仿Youtube</string>
 </resources>

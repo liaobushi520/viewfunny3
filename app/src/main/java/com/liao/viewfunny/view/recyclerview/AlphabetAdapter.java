@@ -3,6 +3,8 @@ package com.liao.viewfunny.view.recyclerview;
 
 import android.support.v7.widget.RecyclerView;
 
+import com.liao.viewfunny.config.StandardAdapter;
+
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;

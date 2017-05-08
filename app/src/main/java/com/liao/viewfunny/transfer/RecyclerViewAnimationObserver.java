@@ -1,4 +1,4 @@
-package com.liao.viewfunny.test;
+package com.liao.viewfunny.transfer;
 
 import android.support.v7.widget.RecyclerView;
 
