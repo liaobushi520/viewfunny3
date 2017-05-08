@@ -20,8 +20,7 @@ import com.liao.viewfunny.R;
 
 import java.util.Random;
 
-public class
-Cheeses {
+public class Cheeses {
 
     private static final Random RANDOM = new Random();
     private final static String[] IMAGES = new String[]{
