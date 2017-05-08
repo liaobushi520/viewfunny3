@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.liao.viewfunny.test.TransferLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/transfer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.liao.viewfunny.test.RvTransferActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:tag="recycler_view">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#44ff11"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#5672ff"
+                android:paddingLeft="8dp"
+                android:paddingRight="4dp"
+                android:tag="edit_text" />
+
+            <Button
+                android:id="@+id/btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</com.liao.viewfunny.test.TransferLayout>
