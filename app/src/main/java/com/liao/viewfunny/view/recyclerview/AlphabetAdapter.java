@@ -1,7 +1,9 @@
 package com.liao.viewfunny.view.recyclerview;
 
 
+import android.nfc.Tag;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 
 import com.liao.viewfunny.config.StandardAdapter;
 
@@ -17,18 +19,48 @@ import java.util.Map;
 
 public abstract class AlphabetAdapter extends RecyclerView.Adapter {
     public static final AlphabetItem.AlphabetComparator COMPARATOR = new AlphabetItem.AlphabetComparator();
+    private static final String TAG = "AlphabetAdapter";
 
 
     private List<AlphabetItem> mItems;
     private Map<Character, Integer> mStartPosArray;
 
-    public AlphabetAdapter(List<AlphabetItem> items) {
-        Collections.sort(items, COMPARATOR);
+    private boolean needSort;
+
+    public AlphabetAdapter(List<AlphabetItem> items, boolean sort) {
+        if (sort) {
+            Collections.sort(items, COMPARATOR);
+            mStartPosArray = findStartPosition(items);
+        }
+        needSort = sort;
         mItems = items;
-        mStartPosArray = findStartPosition(mItems);
+
+    }
+
+    public void addItems(int start, List<AlphabetItem> items) {
+        if (needSort) {
+            Log.w(TAG, "not support add collection for order list");
+            return;
+        }
+        if (items != null && items.size() > 0) {
+            mItems.addAll(start, items);
+            notifyItemRangeInserted(start, items.size());
+        }
+    }
+
+    public void addItems(List<AlphabetItem> items) {
+        int start = mItems.size() - 1;
+        addItems(start, items);
     }
 
     public void addItem(AlphabetItem item) {
+        if (!needSort) {
+            mItems.add(item);
+            notifyItemInserted(mItems.size() - 1);
+            return;
+        }
+
+
         if (item == null) {
             return;
         }

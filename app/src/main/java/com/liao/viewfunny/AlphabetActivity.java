@@ -28,7 +28,7 @@ public class AlphabetActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.rv);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         recyclerView.addItemDecoration(new AlphabetItemDecoration(getApplicationContext(), LinearLayout.VERTICAL));
-        recyclerView.setAdapter(new StandardAdapter());
+        recyclerView.setAdapter(new StandardAdapter(true));
     }
 
 

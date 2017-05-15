@@ -21,7 +21,6 @@
         </activity>
         <activity
             android:name=".RvTransferActivity"
-            android:configChanges="mcc|mnc|keyboard|keyboardHidden|navigation|orientation|screenSize"
             android:label="@string/rv_animation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -41,7 +40,15 @@
         <activity
             android:name=".MagicMinLayoutActivity"
             android:label="@string/like_youtube"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".RecyclerViewAnimationActivity"
+            android:label="@string/recycler_view_animation"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

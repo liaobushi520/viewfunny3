@@ -35,7 +35,6 @@ public class RvTransferActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         setContentView(R.layout.activity_rv_transfer);
         imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         recyclerView = (RecyclerView) findViewById(R.id.rv);

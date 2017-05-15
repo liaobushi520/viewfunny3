@@ -46,20 +46,21 @@ public class StandardAdapter extends AlphabetAdapter {
     }
 
     private static String[] NAMES = {"Youku", "youtube", "Google", "Ibm", "Yahoo", "alibaba", "Apple", "Baidu", "Cancon", "Letv", "Iqiyi", "Jingdong", "Flipboard", "Facebook"};
-    private static List<AlphabetItem> ITEMS = new ArrayList<>();
 
-    static {
+    public static List<AlphabetItem> getData() {
+        List<AlphabetItem> items = new ArrayList<>();
         for (String name : NAMES) {
-            ITEMS.add(new StandardAdapter.Item(name, Cheeses.getRandomCheeseDrawable()));
+            items.add(new StandardAdapter.Item(name, Cheeses.getRandomCheeseDrawable()));
         }
+        return items;
     }
 
-    public StandardAdapter() {
-        this(ITEMS);
+    public StandardAdapter(boolean sort) {
+        this(getData(), sort);
     }
 
-    public StandardAdapter(List<AlphabetItem> items) {
-        super(items);
+    public StandardAdapter(List<AlphabetItem> items, boolean sort) {
+        super(items, false);
     }
 
     @Override
@@ -73,6 +74,8 @@ public class StandardAdapter extends AlphabetAdapter {
         ((StandardViewHolder) holder).textView.setText(item.name);
         Glide.with(holder.itemView.getContext()).load(Cheeses.getRandomCheeseDrawable()).into(((StandardViewHolder) holder).imageView);
     }
+
+
 }
 
 

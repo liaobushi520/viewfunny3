@@ -48,7 +48,7 @@ public class MagicMinLayoutActivity extends AppCompatActivity {
         magicMinLayout = (MagicMinLayout) findViewById(R.id.magic_min);
         recyclerView = (RecyclerView) findViewById(R.id.other);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        RecyclerView.Adapter adepter = new StandardAdapter();
+        RecyclerView.Adapter adepter = new StandardAdapter(true);
         recyclerView.setAdapter(adepter);
 
 
